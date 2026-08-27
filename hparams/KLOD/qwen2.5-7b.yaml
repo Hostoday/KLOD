@@ -1,0 +1,30 @@
+alg_name: "KLOD"
+model_name: "Qwen/Qwen2.5-7B-Instruct"
+device: 0
+data_path: "data/counterfact/counterfact_3k.json"
+save_model_dir: null
+easyedit_path: null
+
+layers: [6]
+rewrite_module_tmp: "model.layers.{}.mlp.down_proj"
+
+target_alpha: 0.85
+kl_lambda: 1.2
+rewrite_kl_lambda: 1.2
+non_target_kl_lambda: 0.6
+num_steps: 25
+batch_size: 100
+lr: 5e-4
+weight_decay: 0
+sample_size: null
+seed: 42
+early_stop_loss: null
+use_context_aug: 0
+context_aug_stage: "klod"
+context_aug_length_params: "10:5"
+context_aug_max_templates: null
+save_tag: "KLOD"
+dataset_name: null
+
+bf16: true
+model_parallel: true

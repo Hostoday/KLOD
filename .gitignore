@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Runtime outputs
+outputs/
+logs/
+wandb/
+*.out
+*.log
+data/
+
+# Local environments and caches
+.DS_Store
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+.cache/
+.pytest_cache/
+
+# Large training artifacts
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors

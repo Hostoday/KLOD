@@ -1,0 +1,27 @@
+alg_name: "LocFT-BF"
+model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+device: 0
+data_path: "data/counterfact/counterfact_3k.json"
+save_model_dir: null
+easyedit_path: null
+
+layers: [22]
+rewrite_module_tmp: "model.layers.{}.mlp.down_proj"
+
+num_steps: 25
+batch_size: 100
+lr: 5e-4
+weight_decay: 0
+sample_size: null
+seed: 42
+objective: "ce"
+overtone_lambda: 0.1
+overtone_epsilon: 0.01
+overtone_nsigma: 0.5
+target_kl_lambda: 0.0
+target_kl_direction: "current_to_ref"
+save_tag: "baseline"
+dataset_name: null
+
+bf16: true
+model_parallel: true
